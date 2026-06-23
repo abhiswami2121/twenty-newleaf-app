@@ -1,8 +1,22 @@
 // Operations Workflows (8 of 30)
 // Triggers: slack_submission.parsed → support_ticket.created → sla_breached
 // → vapi_transfer.received → call.missed → daily_3am → monthly_1st → referral.signup
+// Templates resolved via templateRegistry from ../templates/registry
 
 import { defineWorkflow } from 'twenty-sdk/define';
+import { templateRegistry } from '../templates/registry';
+
+export const templates = {
+  missed_call: templateRegistry.missed_call,
+  ticket_resolved: templateRegistry.ticket_resolved,
+  monthly_statement_ready: templateRegistry.monthly_statement_ready,
+  monthly_statement: templateRegistry.monthly_statement,
+  referral_thanks: templateRegistry.referral_thanks,
+  referral_thanks_email: templateRegistry.referral_thanks_email,
+  appointment_reminder: templateRegistry.appointment_reminder,
+  missing_doc: templateRegistry.missing_doc,
+  agreement_signed: templateRegistry.agreement_signed,
+};
 
 // ── 20. slack_submission.parsed ──────────────────────────────
 export const slackSubmissionParsedWorkflow = defineWorkflow({

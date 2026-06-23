@@ -1,7 +1,27 @@
 // Engagement Workflows (4 of 30)
 // Triggers: at_risk_detected → score_improved → silent_30_days → celebrated_milestone
+// Templates resolved via templateRegistry from ../templates/registry
 
 import { defineWorkflow } from 'twenty-sdk/define';
+import { templateRegistry } from '../templates/registry';
+
+export const templates = {
+  score_celebrate: templateRegistry.score_celebrate,
+  score_dropped_alert: templateRegistry.score_dropped_alert,
+  graduation: templateRegistry.graduation,
+  graduation_email: templateRegistry.graduation_email,
+  score_milestone: templateRegistry.score_milestone,
+  milestone_50pts: templateRegistry.milestone_50pts,
+  milestone_celebration: templateRegistry.milestone_celebration,
+  alumni_checkin: templateRegistry.alumni_checkin,
+  alumni_quarterly: templateRegistry.alumni_quarterly,
+  win_back: templateRegistry.win_back,
+  win_back_email: templateRegistry.win_back_email,
+  referral_thanks: templateRegistry.referral_thanks,
+  referral_thanks_email: templateRegistry.referral_thanks_email,
+  missed_call: templateRegistry.missed_call,
+  callback_promised: templateRegistry.callback_promised,
+};
 
 // ── 16. engagement.at_risk_detected ──────────────────────────
 export const atRiskDetectedWorkflow = defineWorkflow({

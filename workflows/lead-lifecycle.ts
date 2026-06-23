@@ -1,7 +1,19 @@
 // Lead Lifecycle Workflows (5 of 30)
 // Triggers: lead.created → qualified → credit_report.received → agreement.signed → day_zero.charged
+// Templates resolved via templateRegistry from ../templates/registry
 
 import { defineWorkflow } from 'twenty-sdk/define';
+import { templateRegistry } from '../templates/registry';
+
+// Export template map for workflow engine resolution
+export const templates = {
+  welcome_lead: templateRegistry.welcome_lead,
+  qualification_followup: templateRegistry.qualification_followup,
+  payment_success: templateRegistry.payment_success,
+  welcome_enrolled: templateRegistry.welcome_enrolled,
+  credit_analysis_ready: templateRegistry.welcome_enrolled, // reuse welcome as analysis notification
+  standard_enrollment: templateRegistry.agreement_signed_email,
+};
 
 // ── 1. lead.created ──────────────────────────────────────────
 export const leadCreatedWorkflow = defineWorkflow({

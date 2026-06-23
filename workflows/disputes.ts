@@ -1,7 +1,22 @@
 // Dispute Workflows (5 of 30)
 // Triggers: dispute_round.mailed → response_received → deleted → no_response → cfpb_escalation
+// Templates resolved via templateRegistry from ../templates/registry
 
 import { defineWorkflow } from 'twenty-sdk/define';
+import { templateRegistry } from '../templates/registry';
+
+export const templates = {
+  dispute_update: templateRegistry.dispute_update,
+  score_celebrate: templateRegistry.score_celebrate,
+  dispute_response: templateRegistry.dispute_response,
+  dispute_round_1: templateRegistry.dispute_round_1,
+  dispute_round_2: templateRegistry.dispute_round_2,
+  dispute_round_3: templateRegistry.dispute_round_3,
+  dispute_round_complete: templateRegistry.dispute_round_complete,
+  cfpb_filed: templateRegistry.cfpb_filed,
+  cfpb_complaint: templateRegistry.cfpb_complaint,
+  manual_review: templateRegistry.manual_review,
+};
 
 // ── 11. dispute_round.mailed ─────────────────────────────────
 export const disputeRoundMailedWorkflow = defineWorkflow({

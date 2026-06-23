@@ -1,7 +1,18 @@
 // Recovery Workflows (3 of 30)
 // Triggers: recovery.email_sent → fully_recovered → recovery.lost
+// Templates resolved via templateRegistry from ../templates/registry
 
 import { defineWorkflow } from 'twenty-sdk/define';
+import { templateRegistry } from '../templates/registry';
+
+export const templates = {
+  recovery_link: templateRegistry.recovery_link,
+  account_paused: templateRegistry.account_paused,
+  billing_recovery: templateRegistry.billing_recovery,
+  payment_declined: templateRegistry.payment_declined,
+  win_back: templateRegistry.win_back,
+  win_back_email: templateRegistry.win_back_email,
+};
 
 // ── 28. recovery.email_sent ──────────────────────────────────
 export const recoveryEmailSentWorkflow = defineWorkflow({

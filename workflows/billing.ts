@@ -1,7 +1,20 @@
 // Billing Workflows (5 of 30)
 // Triggers: payment.success → declined_soft → declined_hard → card.expiring → subscription.cancelled
+// Templates resolved via templateRegistry from ../templates/registry
 
 import { defineWorkflow } from 'twenty-sdk/define';
+import { templateRegistry } from '../templates/registry';
+
+export const templates = {
+  payment_success: templateRegistry.payment_success,
+  payment_declined: templateRegistry.payment_declined,
+  recovery_link: templateRegistry.recovery_link,
+  card_expiring: templateRegistry.card_expiring,
+  ach_failed: templateRegistry.ach_failed,
+  account_paused: templateRegistry.account_paused,
+  billing_recovery: templateRegistry.billing_recovery,
+  payment_failed: templateRegistry.payment_failed,
+};
 
 // ── 6. payment.success ───────────────────────────────────────
 export const paymentSuccessWorkflow = defineWorkflow({
