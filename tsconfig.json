@@ -16,7 +16,8 @@
     "rootDir": "./src",
     "baseUrl": ".",
     "paths": {
-      "@/*": ["./src/*"]
+      "@/*": ["./src/*"],
+      "twenty-sdk": ["./src/twenty-sdk-shim"]
     }
   },
   "include": ["src/**/*.ts"],
