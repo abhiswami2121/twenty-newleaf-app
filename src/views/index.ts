@@ -13,3 +13,5 @@ export { default as callLog } from './call-log.view';
 export { default as emailSmsLog } from './email-sms-log.view';
 export { default as supportTickets } from './support-tickets.view';
 export { default as twentyAgentMonitor } from './twenty-agent-monitor.view';
+export { default as creditScoreMonitor } from './credit-score-monitor.view';
+export { default as enrollmentPipeline } from './enrollment-pipeline.view';

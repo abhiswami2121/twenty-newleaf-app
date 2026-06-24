@@ -24,3 +24,4 @@ export { default as escalateToHuman } from "./escalateToHuman.skill";
 export { default as notifyCustomer } from "./notifyCustomer.skill";
 export { default as scheduleCall } from "./scheduleCall.skill";
 export { default as updatePaymentMethod } from "./updatePaymentMethod.skill";
+export { default as checkVaultHealth } from "./checkVaultHealth.skill";

@@ -28,3 +28,4 @@ export { default as notificationRouting } from "./notification-routing.workflow"
 export { default as recoveryCampaign } from "./recovery-campaign.workflow";
 export { default as recoveryEscalation } from "./recovery-escalation.workflow";
 export { default as recoveryCompleted } from "./recovery-completed.workflow";
+export { default as scoreChangeAlert } from "./score-change-alert.workflow";
