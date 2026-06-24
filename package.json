@@ -1,0 +1,38 @@
+{
+  "name": "twenty-newleaf-app",
+  "version": "1.0.0",
+  "description": "NewLeaf Financial Twenty CRM App — 4 AI agents, 25 skills, 15 views, 4 dashboards, 30 workflows, Customer 360, NewLeaf theme",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "twenty-sdk build",
+    "dev": "twenty-sdk dev",
+    "lint": "eslint src/",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "twenty-sdk": "^0.1.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.4.0",
+    "@types/node": "^20.11.0",
+    "eslint": "^8.56.0"
+  },
+  "keywords": [
+    "twenty-crm",
+    "newleaf",
+    "financial-services",
+    "credit-repair",
+    "ai-agents",
+    "glm-5.2",
+    "customer-360"
+  ],
+  "author": "abhiswami2121@gmail.com",
+  "license": "UNLICENSED",
+  "private": true,
+  "twenty": {
+    "appId": "newleaf",
+    "sourceType": "local",
+    "minServerVersion": "0.32.0"
+  }
+}

@@ -1,0 +1,15 @@
+export { default as pipelineKanban } from './pipeline-kanban.view';
+export { default as recoveryQueue } from './recovery-queue.view';
+export { default as connectorHealth } from './connector-health.view';
+export { default as activeDisputes } from './active-disputes.view';
+export { default as atRiskSubscriptions } from './at-risk-subscriptions.view';
+export { default as todayPaymentSchedule } from './today-payment-schedule.view';
+export { default as salesLeaderboard } from './sales-leaderboard.view';
+export { default as recentActivity } from './recent-activity.view';
+export { default as customerRoster } from './customer-roster.view';
+export { default as agreementStatus } from './agreement-status.view';
+export { default as billingQueueMonitor } from './billing-queue-monitor.view';
+export { default as callLog } from './call-log.view';
+export { default as emailSmsLog } from './email-sms-log.view';
+export { default as supportTickets } from './support-tickets.view';
+export { default as twentyAgentMonitor } from './twenty-agent-monitor.view';
